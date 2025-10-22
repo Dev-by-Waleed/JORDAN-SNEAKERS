@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #E70000;
+    --secondary-color: #EB0000;
+    --background-color: #FFFFFF;
+}
+
+@font-face {
+    font-family: MonumentExtended;
+    src: url(./assets/fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: Ubuntu-regular;
+    src: url(./assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+header {
+    height: 100vh;
+    background-image: url(./assets/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.navbar .menu-icon {
+    display: none;
+}
+
+.navbar>.logos {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    min-width: max-content;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.navbar>.nav-links>a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-family: MonumentExtended;
+    font-size: 24px;
+    padding: 22px;
+}
+
+.nav-links>a:first-child {
+    color: var(--primary-color);
+}
+
+.nav-links>a:hover {
+    color: var(--primary-color);
+    text-decoration: underline 3px;
+}
+
+.nav-links>a:first-child:hover {
+    color: var(--background-color);
+    text-decoration: underline 3px;
+}
+
+.navbar>.signs {
+    display: flex;
+    width: 15%;
+    min-width: max-content;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.navbar .signs .search input {
+    visibility: hidden;
+    align-items: center;
+    transform: translateX(20%);
+    transition: all 0.3s ease;
+    opacity: 0;
+    margin-left: -100px;
+}
+
+.navbar .signs .search,
+.search:hover {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar .signs .search:hover input {
+    visibility: visible;
+    align-items: center;
+    transform: translateX(0);
+    opacity: 1;
+    margin-left: 0;
+}
+
+.content {
+    width: 85vw;
+    margin: 50vh 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-card {
+    color: var(--background-color);
+    margin-right: 20px;
+    display: flex;
+    width: max-content;
+    position: relative;
+}
+
+.product-card .price {
+    margin-right: 10px;
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--primary-color);
+    font-family: MonumentExtended;
+}
+
+.product-card .details {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.details .brand {
+    font-family: MonumentExtended;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.details .model {
+    font-family: MonumentExtended;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+
+.product-card .tag {
+    font-size: 12px;
+    background-color: var(--secondary-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.options {
+    width: 90vw;
+    margin: 8vh auto;
+    color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.options .choose-colors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-colors h3 {
+    font-size: 20px;
+    color: var(--background-color);
+    font-family: MonumentExtended;
+    letter-spacing: 2px;
+}
+
+.options .choose-colors .images {
+    display: flex;
+    flex-direction: row;
+}
+
+.options .choose-colors .images .shoe {
+    width: 60px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.options .choose-colors .images .shoe:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.options .choose-colors .images img {
+    width: auto;
+    height: auto;
+}
+
+.options .buttons {
+    margin-top: 50px;
+}
+
+.options button {
+    border: none;
+    font-family: MonumentExtended;
+    font-size: 22px;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: 1px solid var(--background-color);
+}
+
+.options button:hover {
+    background-color: transparent;
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
+    cursor: pointer;
+}
+
+.options button:nth-child(2) {
+    background-color: transparent;
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
+}
+
+.options button:nth-child(2):hover {
+    background-color: var(--background-color);
+    color: black;
+}
+
+.options .additional-detail {
+    margin-top: 30px;
+    width: 370px;
+}
+
+.additional-detail h3 {
+    font-family: MonumentExtended;
+    letter-spacing: 2px;
+}
+
+.additional-detail p {
+    font-family: Ubuntu-regular;
+    font-size: 16px;
+}
+
+Main {
+    height: max-content;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+Main h2 {
+    width: 95vw;
+    margin: 70px 0;
+    text-align: center;
+    font-family: MonumentExtended;
+    letter-spacing: 3px;
+}
+
+Main .grid-components {
+    width: 95vw;
+    display: grid;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 450px 450px 450px;
+    gap: 50px;
+    justify-content: center;
+}
+
+.grid-components>.card {
+    background-size: 100% 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+
+
+
+}
+
+.grid-components .card1 {
+    background-image: url(./assets/box1.webp);
+    padding-top: 75%;
+}
+
+.grid-components .card2 {
+    background-image: url(./assets/box2.webp);
+    padding-top: 75%;
+
+}
+
+.grid-components .card3 {
+    background-image: url(./assets/box3.avif);
+    padding-top: 75%;
+}
+
+.grid-components .card4 {
+    background-image: url(./assets/box4.webp);
+    padding-top: 75%;
+}
+
+.grid-components .card5 {
+    background-image: url(./assets/box5.avif);
+    padding-top: 75%;
+}
+
+.grid-components .card6 {
+    background-image: url(./assets/box6.jpg);
+    padding-top: 75%;
+}
+
+.grid-components .hover {
+    opacity: 0;
+}
+
+.grid-components>.card:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: darken;
+    cursor: pointer;
+
+}
+
+.grid-components .card:hover .card-details {
+    opacity: 1;
+    filter: brightness(1);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+    align-items: center;
+    font-family: MonumentExtended;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--background-color);
+}
+
+.grid-components .card-details button {
+    opacity: 1;
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-family: Ubuntu-regular;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+Footer {
+    background-color: black;
+    color: var(--background-color);
+    margin: 0 auto;
+    margin: 50px 0 0;
+    height: 50vh;
+    border-radius: 20px 20px 0 0;
+}
+
+Footer .section-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+Footer .section-1 .socials {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-1 .socials .social img {
+    width: 30px;
+}
+
+Footer .section-2 {
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.section-2 .about,
+.explore,
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2 span:first-child {
+    color: var(--primary-color);
+    font-family: MonumentExtended;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+Footer .padding {
+    font-family: Ubuntu-regular;
+    font-size: 16px;
+    padding: 5px 0px;
+}
+
+.section-3 {
+    margin-top: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .navbar {
+        width: 95vw;
+    }
+
+    .navbar .logos {
+        scale: 0.8;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .navbar .signs {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar>.signs {
+        scale: 0.8;
+        display: flex;
+        width: 15%;
+        min-width: max-content;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .navbar .menu-icon {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .navbar .menu-icon .bar {
+        width: 30px;
+        height: 3px;
+        background-color: var(--background-color);
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .navbar .signs .search input {
+        display: none;
+    }
+
+    .navbar .nav-links {
+        text-align: center;
+        gap: 20px;
+        scale: 0.8;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 5px;
+    }
+
+    .content {
+        width: 90vw;
+        margin: 35vh 0 0 15vw;
+        scale: 0.8;
+    }
+    .options {
+        width: 100%;
+        height: 0vh;
+        scale: 0.6;
+        margin: 20px 0;
+        justify-content: center; 
+    }
+    .options button {
+        padding: 10px 50px;
+        }
+
+    main .grid-components {
+        grid-template-columns: repeat(1, 450px);
+
+    }
+
+    
+
+    footer {
+        display: none;
+    }
+}
